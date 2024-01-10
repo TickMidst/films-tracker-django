@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block page_title %}
+    All Films
+{% endblock page_title %}
+{% block content %}
+<table class='table mt-5 table-bordered table-striped table-hover'> 
+    <thead class='table-dark'>
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for film in films %}
+            <tr>
+                <th><a href={% url "library:single_film" film.id %}>{{film.title}}</a></th>
+                <th>{{film.year}}</th>
+                <th>{{film.category}}</th>
+
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block page_title %}
+{{film.title}}
+{% endblock page_title %}
+
+{% block content %}
+<h1>
+    {{film.title}}, {{film.year}}
+</h1>
+<h2>
+    Category: {{film.category}}
+</h2>
+{% endblock content %}
